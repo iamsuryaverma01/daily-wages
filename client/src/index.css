@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --primary: #5A4FCF;
+  --primary-light: #7E74D5;
+  --primary-dark: #3F379B;
+  --accent: #FF7E5F;
+  --bg-main: #F0F2F5;
+  --bg-sidebar: #5A4FCF;
+  --bg-card: #FFFFFF;
+  --text-main: #333333;
+  --text-muted: #888888;
+  --text-on-primary: #FFFFFF;
+  --sidebar-width: 260px;
+
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+
+  color-scheme: light;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+}
+
+.onshop-shadow {
+  box-shadow: 0 10px 30px rgba(90, 79, 207, 0.08);
+}
+
+.onshop-card {
+  @apply bg-white rounded-[2rem] p-6 onshop-shadow border border-white transition-all duration-300;
+}
+
+.onshop-card:hover {
+  @apply shadow-2xl scale-[1.01];
+}
+
+.btn-onshop {
+  @apply bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-2xl transition-all hover:opacity-90 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.btn-onshop-outline {
+  @apply border-2 border-[var(--primary)] text-[var(--primary)] font-bold py-3 px-8 rounded-2xl transition-all hover:bg-[var(--primary)] hover:text-white active:scale-95 flex items-center justify-center gap-2;
+}
+
+.input-onshop {
+  @apply w-full px-5 py-3 bg-[#F8F9FA] border-none rounded-xl text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[var(--primary)] outline-none transition-all;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+.mesh-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--bg-main);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(90, 79, 207, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(255, 126, 95, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(20, 184, 166, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
+  filter: blur(80px);
+}
+
+.glass-card {
+  @apply bg-white rounded-[2rem] p-6 onshop-shadow border border-white transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-[var(--primary)] text-white font-extrabold py-4 px-8 rounded-2xl transition-all hover:opacity-90 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.input-field {
+  @apply w-full px-5 py-3 bg-[#F8F9FA] border-none rounded-xl text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[var(--primary)] outline-none transition-all;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-[var(--primary)] via-[var(--primary-light)] to-[var(--accent)];
+}
